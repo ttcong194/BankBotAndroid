@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/bg_intro"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/buttonCamera"
+        android:text="Click here"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:visibility="gone"
+        android:padding="@dimen/logo_padding"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:src="@drawable/ic_logo"
+        android:contentDescription="@string/app_name"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/iconLogo"
+        android:layout_marginBottom="@dimen/magrin_bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/bg_aigrandchallenge"
+        android:layout_width="96dp"
+        android:layout_height="96dp" />
+
+</RelativeLayout>

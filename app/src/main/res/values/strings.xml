@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">BankBot</string>
+
+    <string name="hint_enter_a_message">Nhập nội dung hội thoại ...</string>
+    <string name="on_log_click_message">Your custom long click handler</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_copy">Copy</string>
+    <string name="copied_message">Message copied!</string>
+
+    <string name="date_header_today">Today</string>
+    <string name="date_header_yesterday">Yesterday</string>
+
+    <string-array name="view_types_dialog">
+        <item name="image">Image (default)</item>
+        <item name="voice">Voice message (custom)</item>
+    </string-array>
+
+    <string name="start_typing_status">Start typing</string>
+    <string name="stop_typing_status">Stop typing</string>
+
+    <string name="permission_message">This app needs to record audio and recognize your speech.</string>
+    <string name="take_photo_id1">Chụp mặt trước chứng minh thư</string>
+    <string name="take_photo_id2">Chụp mặt sau chứng minh thư</string>
+    <string name="alert_exit">Bạn có muốn thoát khỏi ứng dụng ?</string>
+    <string name="bot_hello">Chào mừng quý khách đến với kênh hỗ trợ thông minh của Ngân hàng SHB. Quý khách cần trợ giúp gì ạ?</string>
+</resources>

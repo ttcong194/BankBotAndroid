@@ -1,0 +1,117 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.stfalcon.chatkit.messages.MessagesList
+        android:id="@+id/messagesList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/input"
+        app:textAutoLink="web"
+        app:incomingBubbleDrawable="@drawable/bg_custom_incoming_message"
+        app:outcomingBubbleDrawable="@drawable/bg_custom_outcoming_message"
+        app:outcomingTimeTextColor="@color/gray_dark_transparent"
+        />
+<!--    app:incomingAvatarHeight="56dp"
+    app:incomingAvatarWidth="56dp"-->
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/input"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/gray_light"/>
+
+    <com.stfalcon.chatkit.messages.MessageInput
+        android:visibility="gone"
+        android:id="@+id/input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:inputButtonDefaultBgColor="@color/dark_orange"
+        app:inputButtonDefaultBgPressedColor="@color/dark_orange"
+        app:attachmentButtonIcon="@drawable/ic_record"
+        app:inputHint="@string/hint_enter_a_message"
+        app:showAttachmentButton="true"/>
+
+
+    <LinearLayout
+        android:background="@color/white"
+        android:id="@+id/recordingInput"
+        android:visibility="visible"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/input_padding_left"
+        android:paddingRight="@dimen/input_padding_right"
+        android:paddingBottom="@dimen/input_padding_bottom"
+        android:paddingTop="@dimen/input_padding_top"
+        android:layout_height="wrap_content">
+        <TextView
+            android:visibility="visible"
+            android:id="@+id/recordingText"
+            android:textSize="@dimen/input_text_size"
+            android:text=""
+            android:gravity="center_horizontal"
+            android:paddingTop="@dimen/input_padding_top"
+            android:paddingBottom="@dimen/input_padding_bottom"
+            android:textColor="@color/gray_dark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:src="@drawable/ic_keyboard"
+                android:id="@+id/recordingCloseButton"
+                android:background="@drawable/mask"
+                android:layout_width="@dimen/input_button_width"
+                android:layout_height="@dimen/input_button_height"
+                android:layout_centerVertical="true"/>
+
+            <android.support.v4.widget.Space
+                android:id="@id/attachmentButtonSpace"
+                android:layout_width="@dimen/input_button_width"
+                android:layout_height="0dp"
+                android:layout_toEndOf="@id/recordingCloseButton"
+                android:layout_toRightOf="@id/recordingCloseButton"/>
+
+            <ImageButton
+                android:id="@+id/indicatorRecordingButton"
+                android:src="@drawable/ic_indicator"
+                android:tint="@color/tint_nothearing"
+                android:backgroundTint="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/attachmentButtonSpace"
+                android:layout_toLeftOf="@id/sendButtonSpace"
+                android:layout_toRightOf="@id/attachmentButtonSpace"
+                android:layout_toStartOf="@id/sendButtonSpace" />
+            <android.support.v4.widget.Space
+                android:id="@id/sendButtonSpace"
+                android:layout_width="@dimen/input_button_width"
+                android:layout_height="0dp"
+                android:layout_toLeftOf="@id/recordingSendButton"
+                android:layout_toStartOf="@id/recordingSendButton"/>
+
+            <ImageButton
+                android:visibility="invisible"
+                android:src="@drawable/ic_send"
+                android:tint="@color/white"
+                android:id="@+id/recordingSendButton"
+                android:layout_width="@dimen/input_button_width"
+                android:layout_height="@dimen/input_button_height"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/mask_active2"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_above="@+id/btn_takepicture"
+        android:layout_height="match_parent">
+        <TextureView
+            android:id="@+id/texture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"/>
+
+        <View
+            android:id="@+id/frame"
+            android:layout_marginLeft="@dimen/magrin_bottom"
+            android:layout_marginRight="@dimen/magrin_bottom"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_capture"
+            android:layout_width="266dp"
+            android:layout_height="200dp"></View>
+
+        <TextView
+            android:id="@+id/guideText"
+            android:textColor="@color/orange"
+            android:layout_centerHorizontal="true"
+            android:textSize="24sp"
+            android:layout_marginTop="40dp"
+            android:text="@string/take_photo_id1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+
+    <!--<FrameLayout
+        android:id="@+id/overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_takepicture"
+        android:layout_alignParentTop="true" />-->
+    <ImageButton
+        android:id="@+id/btn_takepicture"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_takephoto"
+        android:background="@color/transparent"
+        android:scaleType="fitCenter"
+        android:text="Take Photo" />
+
+    <ImageButton
+        android:id="@+id/btn_cancel"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:background="@color/transparent"
+        android:src="@drawable/ic_close_white_64dp"
+        android:tint="@color/dark_gray"
+        android:text="Take Photo" />
+
+    <ImageButton
+        android:id="@+id/btn_accept"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/transparent"
+        android:src="@drawable/ic_check_white_64dp"
+        android:tint="@color/green"
+        />
+</RelativeLayout>

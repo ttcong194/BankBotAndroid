@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="vn.aiteam.hackathon">
+
+    <dist:module dist:instant="true" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera2.full" />
+
+    <!--<uses-feature android:name="android.hardware.camera" />
+    <uses-feature
+        android:name="android.hardware.camera.any"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />-->
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/GreenTheme">
+        <activity
+            android:theme="@style/OrangeThemeNoActionBar"
+            android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/OrangeTheme"
+            android:name=".MainActivity"
+            android:screenOrientation="sensorPortrait"
+            android:label="BankBot"
+            ></activity>
+        <activity
+            android:theme="@style/BlueTheme"
+            android:name=".RecordExample"
+            android:label="Record Audio"
+            ></activity>
+        <service android:name=".Services.SpeechService"/>
+
+        <activity
+            android:theme="@style/OrangeThemeNoActionBar"
+            android:name=".MakePhotoActivity"
+            android:screenOrientation="sensorPortrait"
+            android:label="BankBot"
+            ></activity>
+
+        <activity
+            android:theme="@style/OrangeThemeNoActionBar"
+            android:name=".MakePhoto2Activity"
+            android:screenOrientation="sensorPortrait"
+            android:label="BankBot"
+            ></activity>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="vn.aiteam.hackathon.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+    </application>
+
+</manifest>
